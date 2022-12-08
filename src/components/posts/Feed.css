@@ -1,0 +1,35 @@
+.postFeed{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgPost {
+    max-height: none;
+    max-width: 400px;
+    min-height: 200px;
+    min-width: 200px;
+    background-color:#F7F3FF;
+    border-radius: 10px;
+    padding:.5%;
+    margin: 10px;
+}
+
+.imgPost__img {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.textPost{
+    max-height: none;
+    max-width: 400px;
+    min-height: none;
+    min-width: 200px;
+    background-color:#F7F3FF;
+    border-radius: 10px;
+    padding:.5%;
+    margin: 10px;
+}

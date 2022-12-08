@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.navbar__item {
+    width: 100px;
+    text-align: center;
+    text-justify: center;
+    flex-basis:5%;
+    list-style-type: none;
+    background-color: #B19FC8;
+    opacity: .5;
+    border-radius: 7px;
+    padding: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+}
+
+.navbar__item__logo {
+    justify-content: center;
+    flex-basis:20%;
+    list-style-type: none;
+}
+
+.navbar__item__logo__img{
+    height: 100px;
+    justify-content: center;
+}
+
+.link_styles {
+    color:black;
+    text-decoration: none;
+}
