@@ -1,6 +1,10 @@
 .postFeed{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .imgPost {
@@ -11,7 +15,7 @@
     background-color:#F7F3FF;
     border-radius: 10px;
     padding:.5%;
-    margin: 10px;
+    margin: 5px;
 }
 
 .imgPost__img {
@@ -31,5 +35,10 @@
     background-color:#F7F3FF;
     border-radius: 10px;
     padding:.5%;
-    margin: 10px;
+    margin: 5px;
+}
+
+.titleStyle{
+    text-align: center;
+    text-transform: uppercase;
 }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import "./Feed.css"
+import "./postFeed.css"
 
 export const PostFeed = () => {
     //deconstruction of useState for posts
@@ -19,25 +18,27 @@ useEffect (
 )
 
 return <>
+    <div className="postFeed">
     {
         posts.map(
             (post) => {
-                if(post.imgURL!==""){
-                    return <section className="imgPost">
-                        <h2>{post.title}</h2>
+                if(post.product===true){
+                    return <section className="imgPost" key={post.id}>
+                        <h2 className="titleStyle">{post.title}</h2>
                         <img src={post.imgURL} className="imgPost__img" />
                         <p>
                             {post.textContent}
                         </p>
                     </section>
                 } else {
-                    return <section className="textPost">
-                        <h2>{post.title}</h2>
+                    return <section className="textPost" key={post.id}>
+                        <h2 className="titleStyle">{post.title}</h2>
                             {post.textContent}
                     </section>
                 }
             }
         )
     }
+</div>
 </>
 }

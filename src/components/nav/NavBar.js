@@ -1,33 +1,34 @@
 import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
 import mmlogo from "../images/mmlogo.png"
+import homeicon from "../images/homeicon.png"
+import discovericon from "../images/discovericon.png"
+import posticon from "../images/posticon.png"
+import profileicon from "../images/profileicon.png"
+import logouticon from "../images/logouticon.png"
 
 export const NavBar = () => {
     const navigate = useNavigate()
     
     return (
         <ul className="navbar">
-            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/home`}>
-            <li className="navbar__item">
-                home
-            </li></Link>
-            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/discover`}>
-            <li className="navbar__item">
-                discover
-            </li></Link>
             <li className="navbar__item__logo">
-            <img src={mmlogo} className="navbar__item__logo__img"></img>
+            <Link to="/home"><img src={mmlogo} className="navbar__item__logo__img"></img></Link>
             </li>
-            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/sell`}>
-            <li className="navbar__item">sell
-            </li></Link>
+            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/home`}>
+                <img src={homeicon} className="navbar_icon"></img>
+            </Link>
+            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/create-post`}>
+                <img src={posticon} className="navbar_icon"></img>
+            </Link>
+            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/profile`}>
+                <img src={profileicon} className="navbar_icon"></img>
+            </Link>
             <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to="" onClick={() => {
                     localStorage.removeItem("makers_user")
                     navigate("/", {replace: true})
                 }}>
-            <li className="navbar__item navbar__logout">
-                logout
-             </li></Link>
+            <img src={logouticon} className="navbar_icon"></img></Link>
         </ul>
     )
 }
