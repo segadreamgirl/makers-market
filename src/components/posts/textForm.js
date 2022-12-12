@@ -112,9 +112,9 @@ return <>
             }
         }>
         <option key="default">Select one...</option>
-        { tags.map(
+        {tags.map(
             (tag) => {
-                if(tag.id<4){
+                if(tag.label==="text"){
                     return <option key={tag.id} value={tag.id}>{tag.tag}</option>
                 }
             }

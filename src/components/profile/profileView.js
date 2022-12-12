@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
-import deleteicon from "../images/delete.png"
+import { Link } from "react-router-dom"
 import "./profile.css"
 
 export const ProfileView = () => {
     //deconstruction of useState for posts
 const [posts, setPosts] = useState([])
+const [deleteButton, deleteButtonClicked] = useState(false)
 
 const makersUser = localStorage.getItem("makers_user")
 const userObject = JSON.parse(makersUser)
@@ -18,8 +18,27 @@ useEffect (
                 setPosts(postArray)
         })
     },
-    [] //observing initial state
+    []
 )
+
+useEffect (
+    () =>{
+        fetch(`http://localhost:8088/posts`)
+            .then(response => response.json())
+            .then((postArray)=>{
+                setPosts(postArray)
+        })
+    },
+    [deleteButton]
+)
+
+const handleDelete = (postObject) => {
+    fetch(`http://localhost:8088/posts/${postObject.id}`,{
+        method: "DELETE"})
+        .then(()=>{
+            deleteButtonClicked(true)
+        })
+}
 
 return <>
 <div className="profileContainer">
@@ -36,7 +55,9 @@ return <>
                             <div className="btn_edit">
                             <Link to={`/profile/edit/product/${post.id}`} className="link_styles">edit</Link> 
                             </div>
-                            <div className="btn_delete"> delete </div>
+                            <div className="btn_delete"> 
+                            <Link to="" onClick={ () => {handleDelete(post)}} className="link_styles">delete</Link>
+                        </div>
                         </div>
                         </div>
                         <img src={post.imgURL} className="imgPost__img" />
@@ -52,8 +73,8 @@ return <>
                             <div className="btn_edit">
                             <Link to={`/profile/edit/post/${post.id}`} className="link_styles">edit</Link> 
                             </div>
-                            <div className="btn_delete"> 
-                            delete
+                            <div className="btn_delete">
+                            <Link to="" onClick={ () => {handleDelete(post)}} className="link_styles">delete</Link>
                             </div>
                         </div>
                         </div>
