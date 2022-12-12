@@ -5,7 +5,6 @@ import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./MakersMarket.css"
-import { PostFeed } from "./posts/postFeed"
 
 
 export const MakersMarket = () => {

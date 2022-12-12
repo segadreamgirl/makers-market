@@ -5,8 +5,7 @@ import "./Login.css"
 export const Register = (props) => {
     const [user, setUser] = useState({
         email: "",
-        fullName: "",
-        isStaff: false
+        name: ""
     })
     let navigate = useNavigate()
 
@@ -22,8 +21,7 @@ export const Register = (props) => {
             .then(createdUser => {
                 if (createdUser.hasOwnProperty("id")) {
                     localStorage.setItem("makers_user", JSON.stringify({
-                        id: createdUser.id,
-                        staff: createdUser.isStaff
+                        id: createdUser.id
                     }))
 
                     navigate("/")
@@ -56,9 +54,9 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Kandy Korner</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for Maker's Market</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
+                    <label htmlFor="fullName">Name </label>
                     <input onChange={updateUser}
                            type="text" id="fullName" className="form-control"
                            placeholder="Enter your name" required autoFocus />
@@ -68,15 +66,6 @@ export const Register = (props) => {
                     <input onChange={updateUser}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
-                </fieldset>
-                <fieldset>
-                    <input onChange={(evt) => {
-                        const copy = {...user}
-                        copy.isStaff = evt.target.checked
-                        setUser(copy)
-                    }}
-                        type="checkbox" id="isStaff" />
-                    <label htmlFor="email"> I am an employee </label>
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register </button>
