@@ -8,6 +8,7 @@ import { ProfileView } from "../profile/profileView"
 export const UserView = () => {
     return (
         <Routes>
+                <Route path="/" element={ <PostFeed />}/>
                 <Route path="home" element={ <PostFeed />}/>
                 <Route path="create-post" element={ <PostForm/> }/>
                 <Route path="profile" element={ < ProfileView />}/>
