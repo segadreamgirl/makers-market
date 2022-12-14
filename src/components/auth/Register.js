@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Register = (props) => {
@@ -68,8 +68,17 @@ export const Register = (props) => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="profilePic">Profile Picture</label>
+                    <input onChange={updateUser}
+                           type="text" id="profilePic" className="form-control"
+                           placeholder="Enter a url for your profile picture" required autoFocus />
+                </fieldset>
+                <fieldset>
                     <button type="submit"> Register </button>
                 </fieldset>
+                <section className="link--register">
+                <Link to="/login">Already registered?</Link>
+            </section>
             </form>
         </main>
     )

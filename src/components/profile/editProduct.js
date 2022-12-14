@@ -122,7 +122,7 @@ export const EditProduct = () =>{
             <option key="default">Select one..</option>
             { tags.map(
                 (tag) => {
-                    if(tag.id>3){
+                    if(tag.label==="product"){
                         return <option key={tag.id} value={tag.id}>{tag.tag}</option>
                     }
                 }

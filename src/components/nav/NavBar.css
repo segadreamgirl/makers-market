@@ -5,8 +5,11 @@
     align-items: center;
     background-color: white;
     position: -webkit-sticky; /*sticky nav in safari*/
-    position: sticky;
-    top: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    margin-top: 0;
 }
 .navbar__item__logo {
     justify-content: center;
@@ -15,12 +18,12 @@
 }
 
 .navbar__item__logo__img{
-    height: 70px;
+    height: 50px;
     justify-content: center;
 }
 
 .navbar_icon {
-    width: 50px;
+    width: 30px;
 }
 
 .link_styles {

@@ -24,15 +24,15 @@ return <>
             (post) => {
                 if(post.product===true){
                     return <section className="imgPost" key={post.id}>
-                        <h2 className="titleStyle">{post.title}</h2>
-                        <img src={post.imgURL} className="imgPost__img" />
+                        <h3 className="titleStyle">{post.title}</h3>
+                        <img src={post.imgURL} width="250px" />
                         <p>
                             {post.textContent}
                         </p>
                     </section>
                 } else {
                     return <section className="textPost" key={post.id}>
-                        <h2 className="titleStyle">{post.title}</h2>
+                        <h3 className="titleStyle">{post.title}</h3>
                             {post.textContent}
                     </section>
                 }

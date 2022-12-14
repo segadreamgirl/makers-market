@@ -2,34 +2,23 @@
     display: flex;
     flex-flow: row-reverse wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 70px;
 }
 
 .imgPost {
-    max-height: none;
-    max-width: 400px;
-    min-height: 200px;
-    min-width: 200px;
+    width: 250px;
     background-color:#F7F3FF;
     border-radius: 10px;
     padding:.5%;
     margin: 5px;
-}
-
-.imgPost__img {
     justify-content: center;
     align-items: center;
-    height: 400px;
-    width: 400px;
-    overflow: hidden;
     justify-content: center;
 }
 
 .textPost{
-    max-height: none;
-    max-width: 400px;
-    min-height: none;
-    min-width: 200px;
+    width: 250px;
     background-color:#F7F3FF;
     border-radius: 10px;
     padding:.5%;

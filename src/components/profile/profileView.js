@@ -7,6 +7,8 @@ export const ProfileView = () => {
 const [posts, setPosts] = useState([])
 const [deleteButton, deleteButtonClicked] = useState(false)
 
+const [users, setUsers] = useState([])
+
 const makersUser = localStorage.getItem("makers_user")
 const userObject = JSON.parse(makersUser)
 
@@ -16,6 +18,17 @@ useEffect (
             .then(response => response.json())
             .then((postArray)=>{
                 setPosts(postArray)
+        })
+    },
+    []
+)
+
+useEffect (
+    () =>{
+        fetch(`http://localhost:8088/users`)
+            .then(response => response.json())
+            .then((usersArray)=>{
+                setUsers(usersArray)
         })
     },
     []
@@ -42,7 +55,7 @@ const handleDelete = (postObject) => {
 
 return <>
 <div className="profileContainer">
-    <div className="postFeed">
+    <div className="profilePostFeed">
     {
         posts.map(
             (post) => {
@@ -50,7 +63,12 @@ return <>
                 if(post.product===true){
                     return <section className="imgPost" key={post.id}>
                         <div className="titleContainer">
-                        <h2 className="titleStyle">{post.title}</h2>
+                        <h3 className="titleStyle">{post.title}</h3>
+                        </div>
+                        <img src={post.imgURL} className="profileImgPost__img" />
+                        <p>
+                            {post.textContent}
+                        </p>
                         <div className="btnContainer">
                             <div className="btn_edit">
                             <Link to={`/profile/edit/product/${post.id}`} className="link_styles">edit</Link> 
@@ -59,17 +77,14 @@ return <>
                             <Link to="" onClick={ () => {handleDelete(post)}} className="link_styles">delete</Link>
                         </div>
                         </div>
-                        </div>
-                        <img src={post.imgURL} className="imgPost__img" />
-                        <p>
-                            {post.textContent}
-                        </p>
                     </section>
                 } else {
-                    return <section className="textPost" key={post.id}>
+                    return <section className="profileTextPost" key={post.id}>
                         <div className="titleContainer">
-                        <h2 className="titleStyle">{post.title}</h2>
-                        <div className="btnContainer">
+                        <h3 className="titleStyle">{post.title}</h3>
+                        </div>
+                            {post.textContent}
+                            <div className="btnContainer">
                             <div className="btn_edit">
                             <Link to={`/profile/edit/post/${post.id}`} className="link_styles">edit</Link> 
                             </div>
@@ -77,8 +92,6 @@ return <>
                             <Link to="" onClick={ () => {handleDelete(post)}} className="link_styles">delete</Link>
                             </div>
                         </div>
-                        </div>
-                            {post.textContent}
                     </section>
                 }
             }
@@ -86,7 +99,24 @@ return <>
         )
     }
 </div>
-<div className="sideProfile"></div>
+<div className="sideProfile">
+{
+    users.map(
+        (user)=>{
+            if(user.id === userObject.id)
+            return <>
+            <section><img src={user.profilePic} className="sideProfile__img"/></section>
+            <div>
+            <section className="sideProfile__name" key={user.id}><h2>{user.name}</h2></section>
+            <section><h3>@{user.username}</h3></section>
+            <section><h5>{user.bio}</h5></section>
+            </div>
+            <Link to={`/profile/edit`} className="link_styles"><h5>edit</h5></Link> 
+            </>
+        }
+    )
+}
+</div>
 </div>
 </>
 }
