@@ -96,7 +96,7 @@ return <>
                 }
             }
         }
-        )
+        ).reverse()
     }
 </div>
 <div className="sideProfile">
