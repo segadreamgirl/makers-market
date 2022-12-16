@@ -111,7 +111,7 @@ return <>
             <section><h3>@{user.username}</h3></section>
             <section><h5>{user.bio}</h5></section>
             </div>
-            <Link to={`/profile/edit`} className="link_styles"><h5>edit</h5></Link> 
+            <Link to='/profile/edit' className="link_styles"><h5>edit</h5></Link>
             </>
         }
     )

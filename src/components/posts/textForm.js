@@ -125,7 +125,7 @@ return <>
 <button 
 onClick={(clickEvent) => handlePost(clickEvent)}
 className="postButton">
-    Post
+    <h2>Post</h2>
 </button>
 </form> 
 </div>
