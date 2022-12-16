@@ -56,9 +56,9 @@ export const Register = (props) => {
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Maker's Market</h1>
                 <fieldset>
-                    <label htmlFor="fullName">Name </label>
+                    <label htmlFor="name">Name </label>
                     <input onChange={updateUser}
-                           type="text" id="fullName" className="form-control"
+                           type="text" id="name" className="form-control"
                            placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
@@ -68,10 +68,22 @@ export const Register = (props) => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="username"> Username </label>
+                    <input onChange={updateUser}
+                        type="text" id="username" className="form-control"
+                        placeholder="enter a username" required />
+                </fieldset>
+                <fieldset>
                     <label htmlFor="profilePic">Profile Picture</label>
                     <input onChange={updateUser}
                            type="text" id="profilePic" className="form-control"
                            placeholder="Enter a url for your profile picture" required autoFocus />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="bio">bio</label>
+                    <input onChange={updateUser}
+                           type="text" id="bio" className="form-control"
+                           placeholder="tell us what you're all about" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register </button>

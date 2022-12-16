@@ -1,0 +1,28 @@
+.profileEdit__container{
+    display: flex;
+    margin-left: 350px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profileEdit__title{
+    justify-content: center;
+    padding-left:30%;
+}
+
+.editFormContainer{
+    width: 900px;  
+    padding-left:30%;
+    padding-top: 50px;
+}
+label{
+    font-weight: 600;
+    font-size: 25px;
+  }
+
+.sideProfile__title{
+    width: 200px;
+    height: 150px;
+    position: fixed;
+    top: 300px;
+}
