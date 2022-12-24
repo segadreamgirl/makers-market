@@ -5,6 +5,7 @@ import { PostForm } from "../posts/postForm"
 import { EditPost } from "../profile/editPost"
 import { EditProduct } from "../profile/editProduct"
 import { ProfileEdit } from "../profile/editProfileForm"
+import { ForeignProfile } from "../profile/foreignProfile"
 import { ProfileView } from "../profile/profileView"
 
 export const UserView = () => {
@@ -18,6 +19,7 @@ export const UserView = () => {
                 <Route path="profile/edit/post/:postId" element={ < EditPost /> } />
                 <Route path="profile/edit" element={ < ProfileEdit /> } />
                 <Route path="post/:postId" element={ < Post /> } />
+                <Route path="profile/:userId" element={ < ForeignProfile /> } />
         </Routes>
     )
 
