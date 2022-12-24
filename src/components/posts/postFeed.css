@@ -1,8 +1,4 @@
 .postFeed{
-    /*display: flex;
-    flex-flow: row-reverse wrap;
-    align-items: flex-start;
-    justify-content: space-around; */
     column-count: 6;
     margin-top: 70px;
 }
@@ -31,4 +27,9 @@
 .titleStyle{
     text-align: center;
     text-transform: uppercase;
+}
+
+.link_styles {
+    color:black;
+    text-decoration: none;
 }

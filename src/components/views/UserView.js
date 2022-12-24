@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { Post } from "../posts/post"
 import { PostFeed } from "../posts/postFeed"
 import { PostForm } from "../posts/postForm"
 import { EditPost } from "../profile/editPost"
@@ -16,6 +17,7 @@ export const UserView = () => {
                 <Route path="profile/edit/product/:postId" element={ < EditProduct/> } />
                 <Route path="profile/edit/post/:postId" element={ < EditPost /> } />
                 <Route path="profile/edit" element={ < ProfileEdit /> } />
+                <Route path="post/:postId" element={ < Post /> } />
         </Routes>
     )
 
