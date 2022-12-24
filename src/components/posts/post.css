@@ -1,0 +1,51 @@
+.profilePic {
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.post__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.post__username{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+}
+
+.post__postedBy{
+    padding-right: 20px;
+}
+.link_styles {
+    color:black;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.post__content {
+    width: 450px;
+    background-color:#F7F3FF;
+    border-radius: 10px;
+    padding:.5%;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    break-inside: avoid-column;
+}
+
+.post__img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.titleStyle{
+    text-align: center;
+    text-transform: uppercase;
+}
