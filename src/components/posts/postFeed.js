@@ -34,7 +34,7 @@ return <>
                 } else {
                     return <section className="textPost" key={post.id}>
                         <h3 className="titleStyle"><Link className="link_styles" to={`/post/${post.id}`}>{post.title}</Link></h3>
-                            {post.textContent}
+                            <p>{post.textContent}</p>
                     </section>
                 }
             }

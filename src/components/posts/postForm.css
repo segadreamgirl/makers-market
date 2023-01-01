@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #B19FC8;
+  background-color: #E4CCFF;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -92,6 +92,11 @@ select {
 }
 
 .postButton{
-  width: 200px;
-  border: 2px solid #E4CCFF;
+  display: flex;
+  justify-content: flex-start;
+  width: 80px;
+  height: 50px;
+  background-color: #E4CCFF;
+  opacity: .65;
+  border: 0px solid;
 }

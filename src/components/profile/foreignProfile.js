@@ -51,7 +51,7 @@ return <>
                                 <div className="titleContainer">
                                 <h3 className="titleStyle"><Link className="link_styles" to={`/post/${post.id}`}>{post.title}</Link></h3>
                                 </div>
-                                    {post.textContent}
+                                    <p>{post.textContent}</p>
                             </section>
                         }
                 }
@@ -59,12 +59,14 @@ return <>
             }
         </div>
         <div className="sideProfile">
+        <div className="sideProfile__info">
                     <section><img src={user.profilePic} className="sideProfile__img"/></section>
-                    <div>
+                    <div className="featuredUser_info">
                     <section className="sideProfile__name" key={user.id}><h2>{user.name}</h2></section>
-                    <section><h3>@{user.username}</h3></section>
-                    <section><h5>{user.bio}</h5></section>
+                    <section className="sideProfile__name"><h3>@{user.username}</h3></section>
+                    <section className="sideProfile__name"><h5>{user.bio}</h5></section>
                     </div>
+        </div>
         </div>
         </div>
 </>

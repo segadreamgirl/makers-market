@@ -1,0 +1,109 @@
+.disc__heads {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.discovers__container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 30px;
+}
+.carousel{
+    padding-top: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden{
+    display: none;
+}
+
+.carousel .carousel__item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+}
+
+.carousel .carousel__actions_product {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions_product button{
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:#F7F3FF;
+}
+
+.carousel .carousel__actions_product button#carousel__button--prev {
+    margin-left: 20px;
+}
+
+.carousel .carousel__actions_product button#carousel__button--next {
+    margin-right: 20px;
+}
+
+.post__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 30px;
+}
+
+.post__content_product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 450px;
+    height: 100%;
+    background-color:#F7F3FF;
+    border-radius: 10px;
+    padding:.5%;
+}
+
+.titleStyle{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.featuredUser__img{
+    width: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.featuredUser_container{
+    display: flex;
+    width: 450px;
+    align-items: center;
+    max-height: 160px;
+    background-color:#F7F3FF;
+    border-radius: 10px;
+    margin: 50px 30px;
+    padding-left: 50px;
+}
+
+.featuredUser_info{
+    display: flex;
+    flex-direction: column;
+    padding-left:50px;
+}
+
+.pageContainer{
+    padding-top: 1%;
+}
