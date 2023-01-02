@@ -83,7 +83,7 @@ return <>
                         <div className="titleContainer">
                         <h3 className="titleStyle">{post.title}</h3>
                         </div>
-                            {post.textContent}
+                            <p>{post.textContent}</p>
                             <div className="btnContainer">
                             <div className="btn_edit">
                             <Link to={`/profile/edit/post/${post.id}`} className="link_styles">edit</Link> 
@@ -100,22 +100,25 @@ return <>
     }
 </div>
 <div className="sideProfile">
+    <div className="sideProfile__info">
 {
     users.map(
         (user)=>{
             if(user.id === userObject.id)
             return <>
-            <section><img src={user.profilePic} className="sideProfile__img"/></section>
+            <div key={user.id}><img src={user.profilePic} className="sideProfile__img"/></div>
             <div>
             <section className="sideProfile__name" key={user.id}><h2>{user.name}</h2></section>
-            <section><h3>@{user.username}</h3></section>
-            <section><h5>{user.bio}</h5></section>
+            <section className="sideProfile__name"><h3>@{user.username}</h3></section>
+            <section className="sideProfile__name"><h5>{user.bio}</h5></section>
             </div>
             <Link to='/profile/edit' className="link_styles"><h5>edit</h5></Link>
             </>
         }
     )
 }
+</div>
+<div><Link to='/profile/bookmarks' className="sideProfile__bkm__btn"><h5>my bookmarks</h5></Link></div>
 </div>
 </div>
 </>

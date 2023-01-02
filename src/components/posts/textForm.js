@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import "./postForm.css"
 
 export const TextForm = () => {
@@ -8,8 +8,9 @@ export const TextForm = () => {
         title:"",
         imgURL:"",
         textContent:"",
-        product:true,
+        product:false,
         tagId:1,
+        likes: 0
     })
 
      //observing state of postTags table + saving it to local variable 'tags' using useState() and useEffect()
@@ -44,7 +45,8 @@ const handlePost = (event) => {
         imgURL: "",
         textContent: post.textContent,
         product: false,
-        tagId: post.tagId
+        tagId: post.tagId,
+        likes: 0
     }
 
     //fetch call uses POST method to send postToSendToAPI to... the API...
@@ -125,7 +127,7 @@ return <>
 <button 
 onClick={(clickEvent) => handlePost(clickEvent)}
 className="postButton">
-    <h2>Post</h2>
+    <Link className="link_styles"><h3>Post</h3></Link>
 </button>
 </form> 
 </div>

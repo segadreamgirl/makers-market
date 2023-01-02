@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import "./postForm.css"
 
 export const ProductForm = () => {
@@ -44,7 +44,8 @@ const handlePost = (event) => {
         imgURL: post.imgURL,
         textContent: post.textContent,
         product: true,
-        tagId: post.tagId
+        tagId: post.tagId,
+        likes: 0
     }
 
     //fetch call uses POST method to send postToSendToAPI to... the API...
@@ -143,7 +144,7 @@ return <>
 <button 
 onClick={(clickEvent) => handlePost(clickEvent)}
 className="postButton">
-    <h2>Post</h2>
+    <Link className="link_styles"><h3>Post</h3></Link>
 </button>
 </form> 
 </div>

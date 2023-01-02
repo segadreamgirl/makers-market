@@ -46,7 +46,7 @@ return <>
     <form className="profileForm">
     <fieldset>
         <div className="form-group">
-            <label htmlFor="Title">Name:</label>
+            <label htmlFor="name">Name:</label>
             <input
                 required autoFocus
                 type="text"
@@ -108,11 +108,13 @@ return <>
                 } />
         </div>
     </fieldset>
+
     <button 
     onClick={(clickEvent) => handleUpdate(clickEvent)}
     className="save">
-        Save
+         <Link className="link_styles">   <h3>Save</h3>    </Link>
     </button>
+
     </form> 
     </div>
         </div>
@@ -120,12 +122,14 @@ return <>
         <div className="sideProfile__title"><h2>Current Settings</h2></div>
 {
         <>
-            <section><img src={profileToBeEdited.profilePic} className="sideProfile__img"/></section>
+        <div className="sideProfile__info">
+            <div><img src={profileToBeEdited.profilePic} className="sideProfile__img"/></div>
             <div>
             <section className="sideProfile__name" key={profileToBeEdited.id}><h2>{profileToBeEdited.name}</h2></section>
-            <section><h3>@{profileToBeEdited.username}</h3></section>
-            <section><h5>{profileToBeEdited.bio}</h5></section>
+            <section className="sideProfile__name"><h3>@{profileToBeEdited.username}</h3></section>
+            <section className="sideProfile__name"><h5>{profileToBeEdited.bio}</h5></section>
             </div>
+        </div>
         </>
 }
 </div>

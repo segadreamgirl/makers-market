@@ -4,6 +4,7 @@
     overflow: hidden;
 }
 
+
 .post__container{
     display: flex;
     align-items: center;
@@ -48,4 +49,14 @@
 .titleStyle{
     text-align: center;
     text-transform: uppercase;
+}
+
+.postFooter {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.postFooter__bkm__btn{
+    padding-left: 10px;
 }

@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
+import discovericon from "../images/discovericon.png"
 import mmlogo from "../images/mmlogo.png"
 import homeicon from "../images/homeicon.png"
-import discovericon from "../images/discovericon.png"
 import posticon from "../images/posticon.png"
 import profileicon from "../images/profileicon.png"
 import logouticon from "../images/logouticon.png"
@@ -17,6 +17,9 @@ export const NavBar = () => {
             </li>
             <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/home`}>
                 <img src={homeicon} className="navbar_icon"></img>
+            </Link>
+            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/discover`}>
+                <img src={discovericon} className="navbar_icon"></img>
             </Link>
             <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/create-post`}>
                 <img src={posticon} className="navbar_icon"></img>
