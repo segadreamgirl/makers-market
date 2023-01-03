@@ -1,5 +1,5 @@
 import "./discover.css"
-import { useState, useRef, useEffect } from "react"
+import { useState,useEffect } from "react"
 import { Link } from "react-router-dom"
 
 export const UserList = () => {

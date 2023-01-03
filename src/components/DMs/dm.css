@@ -1,0 +1,187 @@
+.messaging__title{
+    margin-left: 42%;
+    margin-top: 5%;
+}
+
+.messaging__container{
+    width: 1000px;
+    height: 700px;
+    border-radius: 7%;
+    background-color: #E6E6FA;
+    margin-left:24%;
+    position: relative;
+}
+
+.messaging__container--inner{
+    width: 920px;
+    height: 650;
+    position: absolute;
+    border-radius: 7%;
+    background-color: #f7f3ff;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    padding: 30px;
+}
+
+.messaging__container--boxes{
+    width: 875px;
+    height: 630;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    padding: 30px;
+    background-color: #Ffffff;
+    border-radius: 7%;
+}
+
+.messaging_users {
+    width: 260px;
+    height:560px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 20px;
+    bottom: 20px;
+    border-radius: 7%;
+    background-color: #Ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.messaging__user--box{
+    width: 260px;
+    height: 100px;
+    position: relative;
+    background-color: #Ffffff;
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 1px solid #D9DDDC;
+}
+
+.messaging__user--box:hover{
+    background-color: #D9DDDC;
+    cursor: pointer;
+}
+
+.messaging__user--img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: inherit;
+    top: 20px;
+    left: 10px;
+}
+
+.messaging__user--username{
+    position: inherit;
+    top: 25px;
+    left: 30px;
+}
+
+.messaging_messages {
+    width: 560px;
+    height:460px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 320px;
+    bottom: 20px;
+    border-radius: 7%;
+    background-color: #f6f2f7;
+    padding: 20px;
+    overflow: auto;
+}
+
+.messaging_messages--box{
+    width: 260px;
+    height: 50px;
+    position: relative;
+    background-color: #Ffffff;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 1px solid #c7c6c1;
+}
+
+.messaging_messages--box--mine{
+    width: 260px;
+    height: 50px;
+    position: relative;
+    background-color: #Ffffff;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 1px solid #c7c6c1;
+    left: 50%;
+}
+
+.message--img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.message_textContent{
+    position: relative;
+    columns: 1;
+    width: 150px;
+    left: 20px;
+}
+
+.message_textContent--mine{
+    position: relative;
+    width: 150px;
+    columns: 1;
+    right: 20px;
+    left: 10px;
+}
+
+.message--img--mine{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    left: 80%;
+}
+
+.message-form {
+    position: inherit;
+    background-color: #f4f2f7;
+    border-radius: 40px;
+    height: 60px;
+    width: 560px;
+    left: 320px;
+    top: 530px;
+    padding: 20px;
+}
+
+.message_form--style{
+    font-size: 12px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    background-color: #Ffffff;
+    resize: none;
+}
+
+textarea:focus{
+    outline: #404040;
+}
+
+.message_send--btn{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #E6E6FA;
+    width: 50px;
+    height: 20px;
+    position: relative;
+    left: 90%;
+    cursor: pointer;
+}
