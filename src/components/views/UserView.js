@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Discover } from "../discover/discover"
+import { DirectMessage } from "../DMs/dm"
 import { Post } from "../posts/post"
 import { PostFeed } from "../posts/postFeed"
 import { PostForm } from "../posts/postForm"
@@ -24,6 +25,7 @@ export const UserView = () => {
                 <Route path="profile/:userId" element={ < ForeignProfile /> } />
                 <Route path="profile/bookmarks" element={< MyBookmarks />} />
                 <Route path="discover" element={< Discover />} />
+                <Route path="messaging" element={< DirectMessage />} />
         </Routes>
     )
 

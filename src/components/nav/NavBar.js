@@ -6,6 +6,7 @@ import homeicon from "../images/homeicon.png"
 import posticon from "../images/posticon.png"
 import profileicon from "../images/profileicon.png"
 import logouticon from "../images/logouticon.png"
+import messageicon from "../images/messageicon.png"
 
 export const NavBar = () => {
     const navigate = useNavigate()
@@ -26,6 +27,9 @@ export const NavBar = () => {
             </Link>
             <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/profile`}>
                 <img src={profileicon} className="navbar_icon"></img>
+            </Link>
+            <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to={`/messaging`}>
+                <img src={messageicon} className="navbar_icon"></img>
             </Link>
             <Link className="navbar__link" style={{textDecoration: 'none', color:'black'}} to="" onClick={() => {
                     localStorage.removeItem("makers_user")

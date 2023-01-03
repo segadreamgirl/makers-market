@@ -5,8 +5,7 @@
 --------------------------------------------------------------*/
 body,
 input,
-select,
-textarea {
+select {
   color: #404040;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -24,11 +23,43 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
 }
 
+textarea{
+  resize: none;
+  color: #404040;
+  font-family: 'Poppins', sans-serif;
+}
+
 p {
   margin-bottom: 1.5em;
+}
+
+button {
+  color: #404040;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight:bold;
+  letter-spacing: 2px;
 }
 
 .title--main {
   margin-block-end: 0;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  border: 1px solid #c6b1f0;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background:   #c6b1f0;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #a08bc9;  
+  }
